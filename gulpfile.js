@@ -13,6 +13,7 @@ const svgmin = require('gulp-svgmin');
 const pug = require('gulp-pug');
 const del = require('del');
 const run = require('run-sequence');
+var ghPages = require('gulp-gh-pages');
 
 const bases = {
   src: 'src/',
@@ -102,6 +103,11 @@ gulp.task('symbols', function() {
     .pipe(rename('symbols.svg'))
     .pipe(gulp.dest(bases.build + 'img'))
     .pipe(browserSync.reload({stream: true}))
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('build', function(done) {
