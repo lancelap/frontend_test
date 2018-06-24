@@ -1,0 +1,17 @@
+extends includes/index.pug
+
+block baloonCalendar
+  td(class='calendar__day calendar__day--active baloon')
+    div(class='baloon__body baloon__body--calendar')
+      span.baloon__close
+      h1.baloon__title Митинг на Болотной
+      p.baloon__date 6 марта
+      p.baloon__members Участники:
+      p.baloon__names Володя Пу, Дима Мищечкин
+      textarea(class='baloon__textarea', name="", cols="30", rows="6")
+      button(class='btn baloon__btn') Готово
+      button(class='btn baloon__btn') Удалить
+    div(class='calendar__event')
+      p(class='calendar__event-when') 6
+      p.calendar__event-title 
+      p.calendar__event-members

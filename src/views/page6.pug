@@ -1,0 +1,51 @@
+extends includes/index.pug
+
+block baloonCalendar
+  td(class='calendar__day calendar__day--active')
+    div(class='calendar__event')
+      p(class='calendar__event-when') 6
+      p.calendar__event-title Митинг на Болотной
+      p.calendar__event-members Володя Пу, Дима Мищечкин
+
+block baloonSearch
+  div(class='top-container__search-input top-container__search-input--focus baloon')
+    div(class='baloon__body baloon__body--search')
+      ul.baloon__list
+        li.baloon__item
+          p.baloon__title-search Митинг на Болотной
+          p.baloon__date-search 6 марта
+        li.baloon__item
+          p.baloon__title-search Отчет на митинге
+          p.baloon__date-search 2 апреля
+        li.baloon__item
+          p.baloon__title-search Забрать штаны с болотной площади
+          p.baloon__date-search 6 марта
+        li.baloon__item
+          p.baloon__title-search Митинг на Болотной
+          p.baloon__date-search 6 марта
+        li.baloon__item
+          p.baloon__title-search Митинг на Болотной
+          p.baloon__date-search 6 марта
+        li.baloon__item
+          p.baloon__title-search Митинг на Болотной
+          p.baloon__date-search 6 марта
+        li.baloon__item
+          p.baloon__title-search Митинг на Болотной
+          p.baloon__date-search 6 марта
+        li.baloon__item
+          p.baloon__title-search Отчет на митинге
+          p.baloon__date-search 2 апреля
+        li.baloon__item
+          p.baloon__title-search Забрать штаны с болотной площади
+          p.baloon__date-search 6 марта
+        li.baloon__item
+          p.baloon__title-search Митинг на Болотной
+          p.baloon__date-search 6 марта
+        li.baloon__item
+          p.baloon__title-search Митинг на Болотной
+          p.baloon__date-search 6 марта
+        li.baloon__item
+          p.baloon__title-search Митинг на Болотной
+          p.baloon__date-search 6 марта
+    span.top-container__clean-search(href='#')
+    input(placeholder='Событие, дата или участник')

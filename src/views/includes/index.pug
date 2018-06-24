@@ -1,0 +1,83 @@
+doctype html
+html
+  include head.pug
+  body
+    header
+      div.top-container
+        div.top-container__button-group
+          block baloonAdd
+            a(class='btn btn--primary') Добавить
+          button(class='btn btn--primary') Обновить
+        block baloonSearch
+          div(class='top-container__search-input baloon')
+            input(placeholder='Событие, дата или участник')
+    
+    div.layout-calendar
+      div.layout-calendar__datepicker
+        button.btn &#9668
+        span 16 Марта 2018
+        button.btn &#9658
+
+        a.btn Сегодня
+
+      mixin dayEvent(isActive, isToday, date, title, members)
+        - let eventClass = '';
+        if isActive
+          - eventClass = 'calendar__day calendar__day--active'
+        else if (title !== '')
+          - eventClass = 'calendar__day calendar__day--busy'
+        else 
+          - eventClass = 'calendar__day'
+
+        td(class=eventClass)
+          div(class='calendar__event')
+            p(class=isToday ? 'calendar__event-when calendar__event-when--today' : 'calendar__event-when') #{date}
+            p.calendar__event-title #{title}    
+            p.calendar__event-members #{members}
+
+      table.calendar
+        tr
+          +dayEvent(false, false, 'Понедельник, 25', '', '')
+          +dayEvent(false, false, 'Вторник, 26', '', '')
+          +dayEvent(false, false, 'Среда, 27', '', '')
+          +dayEvent(false, false, 'Четверг, 28', '', '')
+          +dayEvent(false, false, 'Пятница, 1', '', '')
+          +dayEvent(false, true, 'Суббота, 2', '', '')
+          +dayEvent(false, false, 'Воскресенье, 3', '', '')
+          
+        tr
+          - let secondhWeek = 4
+          while secondhWeek < 6
+            +dayEvent(false, false, secondhWeek, '', '')
+            - secondhWeek++
+          block baloonCalendar
+            td(class='calendar__day')
+              div(class='calendar__event')
+                p(class='calendar__event-when') 6
+                p.calendar__event-title 
+                p.calendar__event-members
+          +dayEvent(false, false, '7', '', '')
+          +dayEvent(false, false, '8', '', '')
+          +dayEvent(false, false, '9', 'Напиться!', 'Витя Костин, Петр Михайлов.')
+          +dayEvent(false, false, '10', '', '')
+        tr
+          - let thirdWeek = 11
+          while thirdWeek < 18
+            +dayEvent(false, false, thirdWeek, '', '')
+            - thirdWeek++
+        tr
+          - let fourthWeek = 18
+          while fourthWeek < 22
+            +dayEvent(false, false, fourthWeek, '', '')
+            - fourthWeek++
+          
+          +dayEvent(false, false, '22', 'ДР!', 'Дима молодцов')
+          +dayEvent(false, false, '23', '', '')
+          +dayEvent(false, false, '24', '', '')
+        tr
+          - let fifthWeek = 25
+          while fifthWeek < 32
+            +dayEvent(false, false, fifthWeek, '', '')
+            - fifthWeek++
+
+

@@ -1,0 +1,9 @@
+extends includes/index.pug
+
+block baloonAdd
+  a(class='btn btn--primary btn--pushed baloon') Добавить
+    div.baloon__body
+      span.baloon__close
+      div.baloon__arrow
+      input(type="text", class='baloon__input', placeholder='5 марта, 14:00, День рождения')
+      button(class='btn baloon__btn') Создать

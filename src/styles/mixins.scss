@@ -1,0 +1,46 @@
+@mixin container() {
+  width: 900px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@mixin reset-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button() {
+  display: inline-block;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 6px;
+  padding-left: 6px;
+  font: normal 12px/15px Arial, sans-serif;
+  text-decoration: none;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+  text-transform: unset;
+  color: #666666;
+  background-color: #ffffff;
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+  outline: none;
+  cursor: default;
+
+  &:hover {
+    background-color: #e6e6e6;
+  }
+
+  &:active {
+    background-color: #c7c7c7;
+    color: #000000;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+}

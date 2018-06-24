@@ -1,0 +1,83 @@
+extends includes/index.pug
+
+//- block baloonAdd
+//-   a(class='btn btn--primary btn--pushed baloon') Добавить
+//-     div.baloon__body
+//-       span.baloon__close
+//-       div.baloon__arrow
+//-       input(type="text", class='baloon__input', placeholder='5 марта, 14:00, День рождения')
+//-       button(class='btn baloon__btn') Создать
+
+//- block baloonCalendar
+//-   td(class='calendar__day calendar__day--active baloon')
+//-     div(class='baloon__body baloon__body--calendar')
+//-       span.baloon__close
+//-       input(type="text", class='baloon__input baloon__input--calendar', placeholder='Событие')
+//-       input(type="text", class='baloon__input baloon__input--calendar', placeholder='День, месяц, год')
+//-       input(type="text", class='baloon__input baloon__input--calendar', placeholder='Имена участников')
+//-       textarea(class='baloon__textarea', name="", cols="30", rows="6")
+//-       button(class='btn baloon__btn') Готово
+//-       button(class='btn baloon__btn') Удалить
+//-     div(class='calendar__event')
+//-       p(class='calendar__event-when') 6
+//-       p.calendar__event-title 
+//-       p.calendar__event-members
+
+//- block baloonCalendar
+//-   td(class='calendar__day calendar__day--active baloon')
+//-     div(class='baloon__body baloon__body--calendar')
+//-       span.baloon__close
+//-       h1.baloon__title Митинг на Болотной
+//-       p.baloon__date 6 марта
+//-       p.baloon__members Участники:
+//-       p.baloon__names Володя Пу, Дима Мищечкин
+//-       textarea(class='baloon__textarea', name="", cols="30", rows="6")
+//-       button(class='btn baloon__btn') Готово
+//-       button(class='btn baloon__btn') Удалить
+//-     div(class='calendar__event')
+//-       p(class='calendar__event-when') 6
+//-       p.calendar__event-title 
+//-       p.calendar__event-members
+
+//- block baloonSearch
+//-   div(class='top-container__search-input top-container__search-input--focus baloon')
+//-     div(class='baloon__body baloon__body--search')
+//-       ul.baloon__list
+//-         li.baloon__item
+//-           p.baloon__title-search Митинг на Болотной
+//-           p.baloon__date-search 6 марта
+//-         li.baloon__item
+//-           p.baloon__title-search Отчет на митинге
+//-           p.baloon__date-search 2 апреля
+//-         li.baloon__item
+//-           p.baloon__title-search Забрать штаны с болотной площади
+//-           p.baloon__date-search 6 марта
+//-         li.baloon__item
+//-           p.baloon__title-search Митинг на Болотной
+//-           p.baloon__date-search 6 марта
+//-         li.baloon__item
+//-           p.baloon__title-search Митинг на Болотной
+//-           p.baloon__date-search 6 марта
+//-         li.baloon__item
+//-           p.baloon__title-search Митинг на Болотной
+//-           p.baloon__date-search 6 марта
+//-         li.baloon__item
+//-           p.baloon__title-search Митинг на Болотной
+//-           p.baloon__date-search 6 марта
+//-         li.baloon__item
+//-           p.baloon__title-search Отчет на митинге
+//-           p.baloon__date-search 2 апреля
+//-         li.baloon__item
+//-           p.baloon__title-search Забрать штаны с болотной площади
+//-           p.baloon__date-search 6 марта
+//-         li.baloon__item
+//-           p.baloon__title-search Митинг на Болотной
+//-           p.baloon__date-search 6 марта
+//-         li.baloon__item
+//-           p.baloon__title-search Митинг на Болотной
+//-           p.baloon__date-search 6 марта
+//-         li.baloon__item
+//-           p.baloon__title-search Митинг на Болотной
+//-           p.baloon__date-search 6 марта
+//-     span.top-container__clean-search(href='#')
+//-     input(placeholder='Событие, дата или участник')

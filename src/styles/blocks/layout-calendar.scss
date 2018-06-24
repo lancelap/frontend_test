@@ -1,0 +1,13 @@
+.layout-calendar {
+  @include container();
+}
+.layout-calendar__datepicker {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.layout-calendar__datepicker button {
+  margin-right: 8px;
+}
+.layout-calendar__datepicker span {
+  margin-right: 8px;
+}
